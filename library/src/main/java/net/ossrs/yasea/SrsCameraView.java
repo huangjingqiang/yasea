@@ -214,6 +214,10 @@ public class SrsCameraView extends GLSurfaceView implements GLSurfaceView.Render
     public int getCameraId() {
         return mCamId;
     }
+    
+    public void setFlash(boolean is){
+        mCamera.getParameters().setFlashMode(Parameters.FLASH_MODE_TORCH);
+    }
 
     public boolean startCamera() {
         worker = new Thread(new Runnable() {
